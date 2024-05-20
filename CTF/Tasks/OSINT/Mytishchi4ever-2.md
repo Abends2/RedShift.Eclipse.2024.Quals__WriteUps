@@ -4,18 +4,18 @@
 
 Формат: EclipseCTF{Имя_XX}
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-2-0.png)
+![ScreenShot](screenshots/Mytishchi4ever-2-0.png)
 
 ---
 ### Решение
 
 Таск решается элементарно при помощи поиска по фото:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-2-1.png)
+![ScreenShot](screenshots/Mytishchi4ever-2-1.png)
 
 Но можно и по картам немного поискать или на сайтах, перепутать нереально:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-2-2.png)
+![ScreenShot](screenshots/Mytishchi4ever-2-2.png)
 
 >https://www.komandirovka.ru/sights/mytitshi/monuments/
 

@@ -10,7 +10,7 @@
 Для выполнения этого таска следует воспользоваться таким артефактом как prefetch-файл
 Находятся они в директории Windows/Prefetch
 
-![ScreenShot](Assets/For_Tasks/forensics-3.png)
+![ScreenShot](screenshots/forensics-3.png)
 
 Наблюдаем дату+время последней модификации - получаем флаг
 

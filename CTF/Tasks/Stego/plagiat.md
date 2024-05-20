@@ -9,7 +9,7 @@
 
 Участникам выдан архив с фотографиями из игры `Dota2`:
 
-![ScreenShot](Assets/For_Tasks/plagiat-1.png)
+![ScreenShot](screenshots/plagiat-1.png)
 
 Первые буквы из названий этих предметов складываются в флаг:
 

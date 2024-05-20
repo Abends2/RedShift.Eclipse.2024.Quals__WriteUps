@@ -11,55 +11,55 @@
 
 1. Программа написана на C/C++, о чем свидетельствуют некоторые функции:
 
-![ScreenShot](Assets/For_Tasks/example.com-1.png)
+![ScreenShot](screenshots/example.com-1.png)
 
 2. При написании программы использовалась библиотека WinHTTP:
 
-![ScreenShot](Assets/For_Tasks/example.com-2.png)
+![ScreenShot](screenshots/example.com-2.png)
 
 4. Так же использовалась библиотека WinCrypt:
 
-![ScreenShot](Assets/For_Tasks/example.com-3.png)
+![ScreenShot](screenshots/example.com-3.png)
 
 ### Решение - Этап 2. Исследование восстановленного кода
 
 Теперь можно перейти к изучению main-функции. Первым делом здесь заметна строка «example.com»:
 
-![ScreenShot](Assets/For_Tasks/example.com-4.png)
+![ScreenShot](screenshots/example.com-4.png)
 
 Можно сделать смелое предположение, что формируется GET HTTP-запрос к этому веб-сайту. Эта гипотеза подтверждается при переходе к функции sub\_7FF6059213F0:
 
-![ScreenShot](Assets/For_Tasks/example.com-5.png)
+![ScreenShot](screenshots/example.com-5.png)
 
 Запомним, что в этой функции результат записывается в переменную v34. Следующим ключевым моментом здесь является вызов функции sub\_7FF6059211C0, в которую вторым параметром передается v34. В этой функции видим, что на основе ответа веб-страницы, сохраненного в v34, формируется хэш, сохраняемый в переменную Src:
 
-![ScreenShot](Assets/For_Tasks/example.com-6.png)
+![ScreenShot](screenshots/example.com-6.png)
 
-![ScreenShot](Assets/For_Tasks/example.com-7.png)
+![ScreenShot](screenshots/example.com-7.png)
 
 Следующим важным аспектом является формирование флага. Видно обертку и последующее прибавление к ней переменной Src, которая ныне лежит в переменной v7:
 
-![ScreenShot](Assets/For_Tasks/example.com-8.png)
+![ScreenShot](screenshots/example.com-8.png)
 
-![ScreenShot](Assets/For_Tasks/example.com-9.png)
+![ScreenShot](screenshots/example.com-9.png)
 
 ### Решение - Этап 3. Решение путем отладки
 
 На основе полученных сведений справедливо сделать вывод, что флагом является сформированная хэш-сумма от страницы example.com. Можно написать собственный код, который будет выполнять те же функции, однако это слишком долго и трудозатратно. Поэтому оптимальным решением будет произвести отладку с точкой останова. В дизассемблированном виде функции main заметно, что формирование флага довершается одним из двух блоков кода:
 
-![ScreenShot](Assets/For_Tasks/example.com-10.png)
+![ScreenShot](screenshots/example.com-10.png)
 
 Поставим точку останова в первом блоке кода в надежде, что программа выполняется именно по такому сценарию:
 
-![ScreenShot](Assets/For_Tasks/example.com-11.png)
+![ScreenShot](screenshots/example.com-11.png)
 
 Запустим отладку. При просмотре поочередно всех регистров наш взор должен пасть на RDI:
 
-![ScreenShot](Assets/For_Tasks/example.com-12.png)
+![ScreenShot](screenshots/example.com-12.png)
 
 Именно здесь и будет лежать флаг в обертке, но без закрывающей скобочки:
 
-![ScreenShot](Assets/For_Tasks/example.com-13.png)
+![ScreenShot](screenshots/example.com-13.png)
 
 ---
 

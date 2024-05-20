@@ -9,11 +9,11 @@
 
 Команда `git fsck` позволит просканировать репозиторий на наличие `dangling`-объектов. Таким образом, мы получим хэш нашего объекта:
 
-![ScreenShot](Assets/For_Tasks/Lost-1.png)
+![ScreenShot](screenshots/Lost-1.png)
 
 Просматриваем содержимое `dangling-blob`:
 
-![ScreenShot](Assets/For_Tasks/Lost-2.png)
+![ScreenShot](screenshots/Lost-2.png)
 
 ---
 

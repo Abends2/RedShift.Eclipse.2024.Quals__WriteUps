@@ -13,11 +13,11 @@
 
 Вводим самый банальный запрос в поисковике и находим небольшой памятник:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-6-1.png)
+![ScreenShot](screenshots/Mytishchi4ever-6-1.png)
 
 >Дворник
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-6-2.png)
+![ScreenShot](screenshots/Mytishchi4ever-6-2.png)
 
 ---
 

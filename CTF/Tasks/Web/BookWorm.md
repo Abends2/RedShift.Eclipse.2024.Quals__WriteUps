@@ -11,11 +11,11 @@
 
 Переходим на сайт:
 
-![ScreenShot](Assets/For_Tasks/BookWorm-1.png)
+![ScreenShot](screenshots/BookWorm-1.png)
 
 Смотрим, как подгружаются картинки на сайт:
 
-![ScreenShot](Assets/For_Tasks/BookWorm-2.png)
+![ScreenShot](screenshots/BookWorm-2.png)
 
 ```
 src="/api/book/loadImage?filename=0.png"
@@ -27,7 +27,7 @@ src="/api/book/loadImage?filename=0.png"
 http://localhost:8080/api/book/loadImage?filename=../../../../etc/passwd
 ```
 
-![ScreenShot](Assets/For_Tasks/BookWorm-3.png)
+![ScreenShot](screenshots/BookWorm-3.png)
 
 ---
 

@@ -6,7 +6,7 @@
 
 Точность координат - 3 знака после запятой
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-1-0.png)
+![ScreenShot](screenshots/Mytishchi4ever-1-0.png)
 
 >P.S. мой гид по городу - yandex maps
 
@@ -15,13 +15,13 @@
 
 Для начала найдем название самого завода, производящего вагоны для московского метро:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-1-1.png)
+![ScreenShot](screenshots/Mytishchi4ever-1-1.png)
 
 Далее остается перейти в Яндекс.Карты и нажать на кнопку `Поделиться` и мы увидим координаты:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-1-2.png)
+![ScreenShot](screenshots/Mytishchi4ever-1-2.png)
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-1-3.png)
+![ScreenShot](screenshots/Mytishchi4ever-1-3.png)
 
 Округляем и готово!
 

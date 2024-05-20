@@ -12,11 +12,11 @@
 
 Переходим в браузер, на `http://localhost:5000`
 
-![ScreenShot](Assets/For_Tasks/shifrovalshik-1.png)
+![ScreenShot](screenshots/shifrovalshik-1.png)
 
 Нам необходимо ввести пароль. Пробуем:
 
-![ScreenShot](Assets/For_Tasks/shifrovalshik-2.png)
+![ScreenShot](screenshots/shifrovalshik-2.png)
 
 Смотрим код и замечаем генерацию пароля для администратора:
 
@@ -42,7 +42,7 @@ def obf():
 resp.headers['debug'] = "".join(outcode).encode().hex()
 ```
 
-![ScreenShot](Assets/For_Tasks/shifrovalshik-3.png)
+![ScreenShot](screenshots/shifrovalshik-3.png)
 
 Делаем XOR где в виде ключа будет содержимое `debug`, а в тексте необходимый нам код (для примера чтение флага):
 
@@ -54,11 +54,11 @@ __import__('os').popen("cat /flag.txt").read()
 https://cyberchef.org/#recipe=XOR(%7B'option':'Hex','string':'xxx'%7D,'Standard',false)URL_Encode(true)&input=X19pbXBvcnRfXygnb3MnKS5wb3BlbigiY2F0IC9mbGFnLnR4dCIpLnJlYWQoKQ
 ```
 
-![ScreenShot](Assets/For_Tasks/shifrovalshik-4.png)
+![ScreenShot](screenshots/shifrovalshik-4.png)
 
 Вставляем полученную строку в GET  параметр `password` и получаем флаг
 
-![ScreenShot](Assets/For_Tasks/shifrovalshik-5.png)
+![ScreenShot](screenshots/shifrovalshik-5.png)
 
 ---
 

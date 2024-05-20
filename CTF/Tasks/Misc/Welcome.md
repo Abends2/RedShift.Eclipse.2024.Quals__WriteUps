@@ -9,7 +9,7 @@
 
 Флаг находился в описании чата EclipseCTF:
 
-![ScreenShot](Assets/For_Tasks/Welcome-1.png)
+![ScreenShot](screenshots/Welcome-1.png)
 
 ---
 

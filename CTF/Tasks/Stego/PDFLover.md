@@ -9,29 +9,29 @@
 
 И так, нам дали `pdf-файл`. Откроем его, в песочнице и увидим содержимое. 1 страница, и текст `JavaScript example` намекающий на то, что где-то в этот pdf встроен JS код
 
-![ScreenShot](Assets/For_Tasks/PDFLover-1.png)
+![ScreenShot](screenshots/PDFLover-1.png)
 
 Окей, откроем PDF в виде текста. Нас встретит структура PDF файлов: объекты, стримы и т.п. про это подробнее всегда можно почитать. А если кратко и в картинке, то вот схема того как выглядит всё внутри. 
 
-![ScreenShot](Assets/For_Tasks/PDFLover-2.png)
+![ScreenShot](screenshots/PDFLover-2.png)
 
 В нашем случае блок заголовков очень краткий (Header) и представляет собой версию PDF. А вот body уже содержит объекты и информацию о них, вот, например `obj - object` с `id 1` и типом `/catalog`
 
-![ScreenShot](Assets/For_Tasks/PDFLover-3.png)
+![ScreenShot](screenshots/PDFLover-3.png)
 
 Просмотрим весь PDF и все его объекты, найдём `object 8`, с типом `/action` и это `JS code`. В самом коде нам сообщают, что это мог бы быть вредоносный код, но тут только флаг.
 
-![ScreenShot](Assets/For_Tasks/PDFLover-4.png)
+![ScreenShot](screenshots/PDFLover-4.png)
 
 Открыть блокнотом и увидеть флаг - детский уровень, использовать утилиту и провести мини-аналитику уже школьный. Будем стремиться хотя бы к этому!
 
 Если использовать навыки поиска информации в поисковых системах и утилит для анализа PDF-файлов, мы неизбежно наткнёмся на стэк python-скриптов для анализа. Например [PDF-tools](https://blog.didierstevens.com/programs/pdf-tools/). Используем `pdfid` и увидим что в нашем PDF есть `JS-объекты` и действие исполняемое при открытии. 
 
-![ScreenShot](Assets/For_Tasks/PDFLover-5.png)
+![ScreenShot](screenshots/PDFLover-5.png)
 
 Используем `pdf-parser`. В целом, он сделает то же самое, что и открытие блокнотом, но у него есть несколько интересных флагов для дополнительного анализа. Их использование оставлю читателю на мини-ресёрч, один из них рассмотрим в другом таске. 
 
-![ScreenShot](Assets/For_Tasks/PDFLover-6.png)
+![ScreenShot](screenshots/PDFLover-6.png)
 
 ---
 

@@ -6,18 +6,18 @@
 
 Точность координат - 2 знака после запятой
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-4-0.png)
+![ScreenShot](screenshots/Mytishchi4ever-4-0.png)
 
 ---
 ### Решение
 
 Ищем вновь среди памятников, но есть нюанс...
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-4-1.png)
+![ScreenShot](screenshots/Mytishchi4ever-4-1.png)
 
 В Мытищах 2 ладьи и надо найти правильную. Правильная - та, что стоит возле Дома Культуры:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-4-2.png)
+![ScreenShot](screenshots/Mytishchi4ever-4-2.png)
 
 ---
 

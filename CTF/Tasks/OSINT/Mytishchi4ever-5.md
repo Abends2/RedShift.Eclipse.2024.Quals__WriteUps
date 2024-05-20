@@ -9,7 +9,7 @@
 
 Гуглим, где снимали сериал `Молодежка` и сразу находим ответ:
 
-![ScreenShot](Assets/For_Tasks/Mytishchi4ever-5-1.png)
+![ScreenShot](screenshots/Mytishchi4ever-5-1.png)
 
 ---
 
