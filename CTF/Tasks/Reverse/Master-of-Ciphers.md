@@ -9,25 +9,25 @@
 
 При анализе мы можем обнаружить следующую функцию:
 
-![ScreenShot](screenshots/master-of-ciphers-1.png)
+![ScreenShot](../screenshots/master-of-ciphers-1.png)
 
 Результат данной функции мы и видим в файле. Алгоритм довольно простой, но что-то странное происходит с аргументом `a[3]`. Продолжая анализ мы понимаем, что это просто 3 функции, которые объявлены ранее в коде.
 
-![ScreenShot](screenshots/master-of-ciphers-2.png)
+![ScreenShot](../screenshots/master-of-ciphers-2.png)
 
-![ScreenShot](screenshots/master-of-ciphers-3.png)
+![ScreenShot](../screenshots/master-of-ciphers-3.png)
 
-![ScreenShot](screenshots/master-of-ciphers-4.png)
+![ScreenShot](../screenshots/master-of-ciphers-4.png)
 
 ### Решение - Этап 2. Воссоздание хешированной строки
 
 Теперь имея на руках все необходимые функции, мы можешь воссоздать алгоритм широфвания и подобрать исходную строку, но есть проблема- у нас нет ключа. В процессе исследования программы мы должны были наткнутся на данные функции:
 
-![ScreenShot](screenshots/master-of-ciphers-5.png)
+![ScreenShot](../screenshots/master-of-ciphers-5.png)
 
-![ScreenShot](screenshots/master-of-ciphers-6.png)
+![ScreenShot](../screenshots/master-of-ciphers-6.png)
 
-![ScreenShot](screenshots/master-of-ciphers-7.png)
+![ScreenShot](../screenshots/master-of-ciphers-7.png)
 
 На первый взгляд данная функция кажется просто огромной, но при дальнейшем анализе можно разбить ее на 2 функции - функция которая превращает ключ в читаемый вид, и функция которая обфусцирует ключ для дальнейшего использования. Как итог, мы можем воссоздать функцию требуемые для восстановления строки.
 
@@ -43,19 +43,19 @@
 
 Это строка формируется из вышеуказанных функций, однако есть еще одна, и именно она работает с введенными данными:
 
-![ScreenShot](screenshots/master-of-ciphers-8.png)
+![ScreenShot](../screenshots/master-of-ciphers-8.png)
 
-![ScreenShot](screenshots/master-of-ciphers-9.png)
+![ScreenShot](../screenshots/master-of-ciphers-9.png)
 
-![ScreenShot](screenshots/master-of-ciphers-10.png)
+![ScreenShot](../screenshots/master-of-ciphers-10.png)
 
-![ScreenShot](screenshots/master-of-ciphers-11.png)
+![ScreenShot](../screenshots/master-of-ciphers-11.png)
 
-![ScreenShot](screenshots/master-of-ciphers-12.png)
+![ScreenShot](../screenshots/master-of-ciphers-12.png)
 
 В результате преобразования этой функции(придется покопаться в ассемблере), будет примерно такая функция:
 
-![ScreenShot](screenshots/master-of-ciphers-13.png)
+![ScreenShot](../screenshots/master-of-ciphers-13.png)
 
 Как итог, можно легко подобрать или использовать флаг
 

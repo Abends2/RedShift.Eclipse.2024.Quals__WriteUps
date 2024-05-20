@@ -9,23 +9,23 @@
 
 И так, как бы то ни было, в райтапе на прошлый таск были описаны пару утилит для анализа PDF. В этом райтапе посмотрим таск, который не решается блокнотом или открытием файла в качестве архива :D
 
-![ScreenShot](screenshots/PDFLover2-1.png)
+![ScreenShot](../screenshots/PDFLover2-1.png)
 
 В этот PDF добавили файл с названием `flag`, получается, всё, таск решён, откроем блокнотом и посмотрим, что там:
 
-![ScreenShot](screenshots/PDFLover2-2.png)
+![ScreenShot](../screenshots/PDFLover2-2.png)
 
 И почему-то мы видим кучу ссылок на этот `embeddedFile`, но его самого не видим. Что же мы делаем не так? В глаза бросается странный `stream` на объекте `8`. Вся прошлая структура довольна чистая, а тут какие-то нечитаемые данные. Можно предположить что это наш файл `flag`. Интересный факт - онлайн-утилиты для экстракта вложенных файлов, которые были опробованы, не смогли вытащить flag. Используем `PDF-parser` и посмотрим его help-страничку 
 
-![ScreenShot](screenshots/PDFLover2-3.png)
+![ScreenShot](../screenshots/PDFLover2-3.png)
 
 Флаг `-f` подойдёт для наших целей, он выведет в консоль содержание `stream` сквозь фильтры
 
-![ScreenShot](screenshots/PDFLover2-4.png)
+![ScreenShot](../screenshots/PDFLover2-4.png)
 
 Заметим, что вывод изменился, посмотрим на наш 8-ой объект
 
-![ScreenShot](screenshots/PDFLover2-5.png)
+![ScreenShot](../screenshots/PDFLover2-5.png)
 
 ---
 

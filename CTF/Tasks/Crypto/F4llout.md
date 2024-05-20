@@ -9,11 +9,11 @@
 ---
 ### Решение
 
-![ScreenShot](screenshots/F4llout-1.png)
+![ScreenShot](../screenshots/F4llout-1.png)
 
-![ScreenShot](screenshots/F4llout-2.png)
+![ScreenShot](../screenshots/F4llout-2.png)
 
-![ScreenShot](screenshots/F4llout-3.png)
+![ScreenShot](../screenshots/F4llout-3.png)
 
 У нас есть некоторые сообщения, которые необходимо расшифровать. При этом есть сразу подсказка - Windows Server. В системах Windows ранее активно использовался алгоритм шифрования `cpassword`. Кое-где его можно встретить и сейчас, но это уже из разряда редко.
 
@@ -28,15 +28,15 @@
 
 Пробуем с помощью кастомной команды из описания подключиться к пункту управления одной из точек. Получается это сделать только на `point_3`:
 
-![ScreenShot](screenshots/F4llout-4.png)
+![ScreenShot](../screenshots/F4llout-4.png)
 
 И вот тут интересно. Если выберем `stop`, то...
 
-![ScreenShot](screenshots/F4llout-5.png)
+![ScreenShot](../screenshots/F4llout-5.png)
 
 Да, отключив точку, мы остановили все процессы и запустили ракеты, но что, если попробовать `leave`:
 
-![ScreenShot](screenshots/F4llout-6.png)
+![ScreenShot](../screenshots/F4llout-6.png)
 
 Без лишних слов. Надеюсь, вам понравился таск!
 

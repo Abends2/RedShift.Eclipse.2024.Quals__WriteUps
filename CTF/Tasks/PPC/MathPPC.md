@@ -11,7 +11,7 @@
 
 Подключаемся к ресурсу:
 
-![ScreenShot](screenshots/MathPPC-1.png)
+![ScreenShot](../screenshots/MathPPC-1.png)
 
 Нам необходимо решить 1000 примеров, причем все один крайне простые. Сплойт для решения таска:
 
@@ -64,9 +64,9 @@ connection.interactive()
 
 Результат:
 
-![ScreenShot](screenshots/MathPPC-2.png)
+![ScreenShot](../screenshots/MathPPC-2.png)
 
-![ScreenShot](screenshots/MathPPC-3.png)
+![ScreenShot](../screenshots/MathPPC-3.png)
 
 >P.S. в процессе отборочных таск был сокращен до 100 итераций
 

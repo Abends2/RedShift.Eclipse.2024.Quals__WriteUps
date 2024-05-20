@@ -2,7 +2,7 @@
 
 ***Описание***: Любимый альбом или чистой воды досье...
 
-![ScreenShot](screenshots/my-loved-album-0.png)
+![ScreenShot](../screenshots/my-loved-album-0.png)
 
 Формат: EclipseCTF{...}
 
@@ -19,13 +19,13 @@ Usage: https://ctf-wiki.mahaloz.re/misc/audio/introduction/
 Decode.exe MRrobot_Album.mp3 -P MRrobot -X
 ```
 
-![ScreenShot](screenshots/my-loved-album-1.png)
+![ScreenShot](../screenshots/my-loved-album-1.png)
 
 В результате получаем `.pcm` и `.txt` файлы. В последнем и находим флаг:
 
-![ScreenShot](screenshots/my-loved-album-2.png)
+![ScreenShot](../screenshots/my-loved-album-2.png)
 
-]![ScreenShot](screenshots/my-loved-album-3.png)
+]![ScreenShot](../screenshots/my-loved-album-3.png)
 
 ---
 

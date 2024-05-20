@@ -11,23 +11,23 @@
 
 Подключаемся и проверяем текущий баланс:
 
-![ScreenShot](screenshots/FlagShop-1.png)
+![ScreenShot](../screenshots/FlagShop-1.png)
 
 У нас 1100 на счету. Перейдем в раздел покупки флагов и попытаемся купить флаг Eclipse:
 
-![ScreenShot](screenshots/FlagShop-2.png)
+![ScreenShot](../screenshots/FlagShop-2.png)
 
 Как видим, нам надо 10000 на счету. В таком случае попробуем купить другой флаг:
 
-![ScreenShot](screenshots/FlagShop-3.png)
+![ScreenShot](../screenshots/FlagShop-3.png)
 
 И вот тут останавливаемся, потому что нам надо ввести отрицательное значение (количество покупаемых флагов):
 
-![ScreenShot](screenshots/FlagShop-4.png)
+![ScreenShot](../screenshots/FlagShop-4.png)
 
 Как видим, итоговая стоимость улетела в отрицательно значение, а баланс пополнился! Осталось купить нужный флаг:
 
-![ScreenShot](screenshots/FlagShop-5.png)
+![ScreenShot](../screenshots/FlagShop-5.png)
 
 ---
 

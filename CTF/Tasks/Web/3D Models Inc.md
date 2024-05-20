@@ -11,7 +11,7 @@
 
 Переходим на сайт:
 
-![ScreenShot](screenshots/3D-models-inc-1.png)
+![ScreenShot](../screenshots/3D-models-inc-1.png)
 
 Видим две формы - регистрация и авторизация. Логинов и паролей мы потенциально не знаем, но можно подобрать **Test:Test**, либо зарегистрироваться, либо войти через SQLi:
 
@@ -23,13 +23,13 @@
 
 Таким образом, мы попадаем на главную страницу:
 
-![ScreenShot](screenshots/3D-models-inc-2.png)
+![ScreenShot](../screenshots/3D-models-inc-2.png)
 
 ### Решение - Этап 2. Ошибка в профиле и отображение страниц (Path Traversal)
 
 Переходим во вкладку "**Profile**":
 
-![ScreenShot](screenshots/3D-models-inc-3.png)
+![ScreenShot](../screenshots/3D-models-inc-3.png)
 
 >**TestUserName** - первый пользователь в таблице с пользователями внутри сервиса, поэтому при эксплуатации SQLi, мы получаем доступ относительно этого пользователя
 
@@ -47,7 +47,7 @@ http://192.168.31.9:43434/home.php?view=profile_content.php
 http://192.168.31.9:43434/home.php?view=../../../../etc/passwd
 ```
 
-![ScreenShot](screenshots/3D-models-inc-4.png)
+![ScreenShot](../screenshots/3D-models-inc-4.png)
 
 Отлично! Но чем нам это может помочь? Если у вас получится докрутить до RCE - удачи, вы найдете новый вектор. Но, на мой взгляд, можно пойти по другому пути.
 
@@ -55,11 +55,11 @@ http://192.168.31.9:43434/home.php?view=../../../../etc/passwd
 
 Исследуем директории через `wfuzz`:
 
-![ScreenShot](screenshots/3D-models-inc-5.png)
+![ScreenShot](../screenshots/3D-models-inc-5.png)
 
 При переходе на `database` обнаруживаем `Forbidden`. Но, удача! 200 на `.git/HEAD`:
 
-![ScreenShot](screenshots/3D-models-inc-6.png)
+![ScreenShot](../screenshots/3D-models-inc-6.png)
 
 Используем `git-dumper` для того, чтобы выгрузить репозиторий:
 
@@ -67,21 +67,21 @@ http://192.168.31.9:43434/home.php?view=../../../../etc/passwd
 git-dumper http://192.168.31.9:43434/.git/ ~/web-3d-models
 ```
 
-![ScreenShot](screenshots/3D-models-inc-7.png)
+![ScreenShot](../screenshots/3D-models-inc-7.png)
 
 ### Решение - Этап 4. Исследование git-репозитория
 
 Переходим в папку с полученным репозиторием:
 
-![ScreenShot](screenshots/3D-models-inc-8.png)
+![ScreenShot](../screenshots/3D-models-inc-8.png)
 
 Видим директорию `flag`. Забираем 2-ю часть флага:
 
-![ScreenShot](screenshots/3D-models-inc-9.png)
+![ScreenShot](../screenshots/3D-models-inc-9.png)
 
 Далее нам надо найти 1-ю и 3-ю части флага. Заглянем в директорию с БД:
 
-![ScreenShot](screenshots/3D-models-inc-10.png)
+![ScreenShot](../screenshots/3D-models-inc-10.png)
 
 Теперь мы знаем полный путь и название файла. Можно забрать сам файл, а можно и скачать напрямую:
 
@@ -91,11 +91,11 @@ http://192.168.31.9:43434/database/service-db.db
 
 Открываем БД в DBBrowser:
 
-![ScreenShot](screenshots/3D-models-inc-11.png)
+![ScreenShot](../screenshots/3D-models-inc-11.png)
 
 Вот и наша третья часть флага. Но где первая? Вопрос крайне интересный. Для этого нам необходимо немного исследовать исходники и понять один ключевой пробел в безопасности, а именно - скрытый параметр при создании пользователя:
 
-![ScreenShot](screenshots/3D-models-inc-12.png)
+![ScreenShot](../screenshots/3D-models-inc-12.png)
 
 Иными словами, если нет передачи параметра `is_admin`, то он по умолчанию будет `False`. Но при регистрации мы можем передать этот параметр! Сплойт для создания админа:
 
@@ -140,11 +140,11 @@ if __name__ == "__main__":
 
 Запускаем:
 
-![ScreenShot](screenshots/3D-models-inc-13.png)
+![ScreenShot](../screenshots/3D-models-inc-13.png)
 
 Проходим авторизацию с полученными данными:
 
-![ScreenShot](screenshots/3D-models-inc-14.png)
+![ScreenShot](../screenshots/3D-models-inc-14.png)
 
 И вот она - последняя часть флага!
 

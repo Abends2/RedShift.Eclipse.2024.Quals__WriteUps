@@ -13,7 +13,7 @@
 4. Прогуглив, кто такие `лазуритные гномы` узнаем, что есть `ЛЗГ - Радуга` и серия 097 называется `Death_point's`. Канал `LoppyTM`
 5. Вставляем название в обёртку и получаем флаг
 
-![ScreenShot](screenshots/Minecraft-1.png)
+![ScreenShot](../screenshots/Minecraft-1.png)
 
 ---
 
