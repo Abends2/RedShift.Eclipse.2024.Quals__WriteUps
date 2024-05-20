@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  life-file-web:
+    container_name: life-file-web
+    image: nginx:alpine
+    ports:
+      - 8081:80
+    networks:
+      - internal
+    volumes:
+      - ./src:/var/www/src
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - life-file-php
+
+  life-file-php:
+    container_name: life-file-php
+    image: php:fpm-alpine
+    volumes:
+      - ./src:/var/www/src
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

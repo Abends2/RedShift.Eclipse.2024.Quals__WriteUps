@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  f4llout-service:
+    build: .
+    ports:
+      - 31338:31337

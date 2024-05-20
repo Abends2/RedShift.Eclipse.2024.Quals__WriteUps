@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  simple-math-ppc-service:
+    container_name: math-ppc
+    build: .
+    command: python /app/src/server.py
+    ports:
+      - "36367:36363"
+    healthcheck:
+      test: ["CMD", "netstat -an | grep 36367 > /dev/null; if [ 0 != $? ]; then exit 1; fi;"]
+      interval: 5m
+      timeout: 3s
+      retries: 3
+      start_period: 2m

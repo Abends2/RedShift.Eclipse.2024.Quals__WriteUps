@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  flagshop-server:
+    container_name: flagshop-server
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - 13337:13338

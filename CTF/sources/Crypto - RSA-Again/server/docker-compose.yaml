@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  rsa-server:
+    container_name: rsa-server
+    build: .
+    ports:
+      - 8888:10000

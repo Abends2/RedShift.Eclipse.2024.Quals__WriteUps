@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  book-worm:
+    container_name: "bookworm-task"
+    build:
+      dockerfile: src/Dockerfile
+    image: "bookworm"
+    ports:
+      - "8080:80"

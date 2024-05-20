@@ -1,0 +1,114 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #4062bb;
+    background-image: linear-gradient(95deg, #4062bb, #5200ae);
+    font-family: 'Inconsolata', monospace;
+}
+
+.header-main {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    box-shadow: 5px 5px #7d00fa;
+    background: #303336;
+    color: #fffff0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a:hover {
+    background: #10ceda;
+    border-radius: 6px;
+    color: black;
+}
+
+.body-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    display: flex;
+}
+
+.center {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 30px;
+}
+  
+.article-card {
+    width: 350px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 220ms;
+    border: 2px solid #ccff00;
+}
+  
+.article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+  
+.article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.article-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+  
+.article-card .date, .article-card .title {
+    margin: 0;
+}
+  
+.article-card .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+}
+  
+.article-card .title {
+    font-size: 17px;
+    color: #fff;
+}
+
+footer {
+    height: 50px;
+    background: black;
+    color: grey;
+    position: absolute;
+	left: 0;
+	bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  vulnerable_server:
+    build: .
+    ports:
+      - "10809:12345"
+    restart: always
+    environment:
+      - DEBIAN_FRONTEND=noninteractive

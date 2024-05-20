@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  cookie-web:
+    container_name: "strange-cookies"
+    build:
+      dockerfile: src/Dockerfile
+    image: "cookie-web"
+    ports:
+      - "5555:80"
+    volumes:
+      - ./src:/var/www/html
