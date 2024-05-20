@@ -6,7 +6,7 @@
 
 # Результаты
 
-![ScreenShot](Assets/For_Other/top_10_scoreboard.png)
+![ScreenShot](Assets/top_10_scoreboard.png)
 
-[Полный скорборд](https://github.com/Abends2/RedShift.Eclipse.2024.Quals__WriteUps/blob/main/Assets/For_Other/full_scoreboard.png)
+[Полный скорборд](https://github.com/Abends2/RedShift.Eclipse.2024.Quals__WriteUps/blob/main/Assets/full_scoreboard.png)
 
